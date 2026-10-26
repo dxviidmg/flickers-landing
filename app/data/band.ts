@@ -47,3 +47,8 @@ export const members: Member[] = [
   { name: "Kelvin", role: "Bajo", photo: "/members/kelvin.webp" },
   { name: "Ramón", role: "Batería", photo: null },
 ];
+
+export const about = [
+  "Somos 4 amigos que nos gusta tocar. Hacemos punk rock, pop punk y rock pop desde Actopan, Hidalgo.",
+  "FLICKERS nació en 2025 de las ganas de tocar juntos y armar una banda. Hoy tocamos covers y nos mueven bandas como Caifanes, Zoé, Los Concorde, DLD, PXNDX, División, Delux y Thermo, entre otras. Ya tuvimos la oportunidad de abrirle a 333 (antes Miró).",
+];
