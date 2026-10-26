@@ -1,14 +1,11 @@
 "use client";
 
 import { useState } from "react";
-import { whatsappUrl } from "../data/band";
 
 const links = [
   { label: "Inicio", href: "#inicio" },
   { label: "Quiénes somos", href: "#quienes-somos" },
-  { label: "Próximo show", href: "#shows" },
-  // Contacto abre WhatsApp: no hay sección ni formulario de contacto.
-  { label: "Contacto", href: whatsappUrl, external: true },
+  { label: "Próximos shows", href: "#shows" },
 ] as const;
 
 const linkClass =
@@ -61,9 +58,6 @@ export default function Header() {
                   href={l.href}
                   className={linkClass}
                   onClick={() => setOpen(false)}
-                  {...("external" in l
-                    ? { target: "_blank", rel: "noopener noreferrer" }
-                    : {})}
                 >
                   <span className="text-gradient">{l.label}</span>
                 </a>
