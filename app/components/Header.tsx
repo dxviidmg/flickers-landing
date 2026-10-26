@@ -12,7 +12,7 @@ const links = [
 ] as const;
 
 const linkClass =
-  "block px-2 py-3 text-sm font-semibold uppercase tracking-widest text-foreground transition-colors hover:text-accent md:py-2";
+  "type-eyebrow block px-2 py-3 text-sm transition hover:brightness-125 md:py-2";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -65,7 +65,7 @@ export default function Header() {
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
                 >
-                  {l.label}
+                  <span className="text-gradient">{l.label}</span>
                 </a>
               </li>
             ))}
