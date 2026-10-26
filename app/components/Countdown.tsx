@@ -28,7 +28,7 @@ export default function Countdown() {
   const now = useSyncExternalStore(subscribe, getNow, () => null);
 
   // Reserva el alto antes de montar para que el bloque centrado no salte.
-  if (now === null) return <div className="mt-6 h-24" aria-hidden="true" />;
+  if (now === null) return <div className="mt-6 h-32" aria-hidden="true" />;
   const next = nextShow(now);
   if (!next) return null;
 
@@ -41,10 +41,15 @@ export default function Countdown() {
   ];
 
   return (
-    <div className="mt-6 flex h-24 flex-col items-center gap-3">
-      <p className="text-xs font-semibold uppercase tracking-widest text-muted">
-        Próximo show · {next.show.event ?? next.show.venue}
-      </p>
+    <div className="mt-6 flex h-32 flex-col items-center gap-3">
+      <div className="flex max-w-full flex-col items-center gap-1 text-center">
+        <p className="type-eyebrow text-legible text-xs text-foreground/90">
+          Próximo show
+        </p>
+        <p className="text-legible max-w-[85vw] truncate text-base font-semibold">
+          {next.show.event ?? next.show.venue}
+        </p>
+      </div>
       <div
         role="timer"
         aria-label="Cuenta regresiva al próximo show"
@@ -58,7 +63,7 @@ export default function Countdown() {
             <span className="font-display text-3xl tabular-nums text-gradient sm:text-4xl">
               {pad(u.value)}
             </span>
-            <span className="text-[0.65rem] uppercase tracking-widest text-muted">
+            <span className="type-eyebrow text-[0.7rem] text-muted">
               {u.label}
             </span>
           </div>

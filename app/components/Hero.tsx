@@ -50,10 +50,10 @@ export default function Hero() {
         />
       </h1>
       <div className="-mt-2 flex w-full flex-col items-center gap-1">
-        <p className="text-sm font-medium uppercase tracking-widest text-accent sm:text-base">
+        <p className="type-eyebrow text-legible text-sm text-accent sm:text-base">
           Punk rock · Pop punk · Rock pop
         </p>
-        <p className="max-w-md text-lg text-muted">
+        <p className="text-legible max-w-md text-lg text-foreground/90">
           Actopan, Hgo.
         </p>
         <Countdown />

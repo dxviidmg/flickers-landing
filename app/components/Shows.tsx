@@ -42,7 +42,7 @@ function ShowList({ items, past = false }: { items: Show[]; past?: boolean }) {
               >
                 {day}
               </span>
-              <span className="mt-1 whitespace-nowrap text-xs font-medium uppercase tracking-wider text-muted">
+              <span className="type-eyebrow mt-1 whitespace-nowrap text-[0.7rem] text-muted">
                 {month} {year}
               </span>
             </time>
