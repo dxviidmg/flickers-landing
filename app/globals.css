@@ -198,6 +198,20 @@ body {
     animation: marquee 32s linear infinite;
   }
 
+  /* Menú de escritorio: los enlaces caen uno tras otro al cargar. */
+  @keyframes nav-drop {
+    from {
+      opacity: 0;
+      transform: translateY(-14px);
+    }
+  }
+  @media (min-width: 768px) {
+    .nav-item {
+      animation: nav-drop 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+      animation-delay: var(--d, 0ms);
+    }
+  }
+
   /* Parallax: el fondo del hero baja más despacio que el scroll (solo donde hay scroll-driven animations). */
   @supports (animation-timeline: scroll()) {
     @keyframes hero-parallax {
