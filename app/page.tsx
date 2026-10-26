@@ -2,6 +2,7 @@ import About from "./components/About";
 import FloatingContact from "./components/FloatingContact";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import Marquee from "./components/Marquee";
 import Shows from "./components/Shows";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <Header />
       <main>
         <Hero />
-        <div className="divider-gradient" aria-hidden="true" />
+        <Marquee />
         <About />
         <div className="divider-gradient mx-auto max-w-3xl" aria-hidden="true" />
         <Shows />

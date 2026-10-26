@@ -128,3 +128,20 @@ body {
   transform: translateY(32px);
 }
 
+/* Cinta de texto en movimiento. */
+.marquee-track {
+  display: flex;
+  width: max-content;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes marquee {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .marquee-track {
+    animation: marquee 32s linear infinite;
+  }
+}
