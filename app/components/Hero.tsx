@@ -57,6 +57,12 @@ export default function Hero() {
           Actopan, Hgo.
         </p>
         <Countdown />
+        <a
+          href="#shows"
+          className="mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-gradient-brand px-8 py-3 font-semibold text-brand-contrast transition-opacity hover:opacity-90"
+        >
+          Próximos shows
+        </a>
       </div>
     </section>
   );
