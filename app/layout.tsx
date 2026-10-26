@@ -15,7 +15,7 @@ const anton = Anton({
 
 export const metadata: Metadata = {
   title: "FLICKERS",
-  description: "FLICKERS: punk rock, pop punk y rock pop. Somos 4 amigos que nos gusta tocar.",
+  description: "FLICKERS: punk rock, pop punk y rock pop desde Actopan, Hidalgo.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
