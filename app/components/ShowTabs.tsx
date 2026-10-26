@@ -32,9 +32,9 @@ export default function ShowTabs({ upcoming, past, upcomingCount, pastCount }: P
             aria-selected={tab === t.id}
             aria-controls={`shows-panel-${t.id}`}
             onClick={() => setTab(t.id)}
-            className={`rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
+            className={`min-h-11 rounded-full px-5 py-2 text-sm font-semibold transition-colors ${
               tab === t.id
-                ? "bg-brand text-brand-contrast"
+                ? "bg-gradient-brand text-brand-contrast"
                 : "border border-foreground/30 text-muted hover:border-accent hover:text-accent"
             }`}
           >

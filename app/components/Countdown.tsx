@@ -53,9 +53,9 @@ export default function Countdown() {
         {units.map((u) => (
           <div
             key={u.label}
-            className="flex w-16 flex-col items-center rounded-lg border border-foreground/20 bg-background/60 py-2 backdrop-blur sm:w-20"
+            className="flex w-16 flex-col items-center rounded-lg border border-brand/30 bg-background/60 py-2 backdrop-blur sm:w-20"
           >
-            <span className="font-display text-3xl tabular-nums text-accent sm:text-4xl">
+            <span className="font-display text-3xl tabular-nums text-gradient sm:text-4xl">
               {pad(u.value)}
             </span>
             <span className="text-[0.65rem] uppercase tracking-widest text-muted">

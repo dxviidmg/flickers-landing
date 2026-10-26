@@ -31,7 +31,7 @@ function ShowList({ items, past = false }: { items: Show[]; past?: boolean }) {
         return (
           <li
             key={`${show.date}-${show.event ?? show.venue}`}
-            className={`flex items-center gap-5 py-5 ${past ? "opacity-60" : ""}`}
+            className={`flex items-center gap-5 py-5 ${past ? "opacity-75" : ""}`}
           >
             <time
               dateTime={show.date}
@@ -82,8 +82,8 @@ export default async function Shows() {
     .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <section id="shows" className="mx-auto w-full max-w-3xl px-6 py-20">
-      <h2 className="font-display text-5xl uppercase tracking-wide text-brand sm:text-6xl">
+    <section id="shows" className="mx-auto min-h-svh w-full max-w-3xl px-6 py-20">
+      <h2 className="font-display text-5xl uppercase tracking-wide text-gradient sm:text-6xl">
         Shows
       </h2>
       <ShowTabs

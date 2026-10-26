@@ -18,7 +18,7 @@ export default function FloatingContact() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contrátanos por WhatsApp"
-        className="flex size-14 items-center justify-center rounded-full bg-brand text-brand-contrast shadow-lg transition-opacity hover:opacity-90"
+        className="flex size-14 items-center justify-center rounded-full bg-gradient-brand text-brand-contrast shadow-[0_0_24px_rgba(249,115,22,0.45)] transition-opacity hover:opacity-90"
       >
         <WhatsAppIcon className="size-7" />
       </a>

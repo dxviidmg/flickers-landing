@@ -38,7 +38,7 @@ export default function FlyerModal({ src, label }: Props) {
           type="button"
           onClick={() => dialogRef.current?.close()}
           aria-label="Cerrar"
-          className="absolute -top-3 -right-3 z-10 flex size-9 items-center justify-center rounded-full bg-brand text-xl leading-none font-bold text-brand-contrast shadow-lg"
+          className="absolute -top-3 -right-3 z-10 flex size-9 items-center justify-center rounded-full bg-gradient-brand text-xl leading-none font-bold text-brand-contrast shadow-lg"
         >
           ×
         </button>
