@@ -18,13 +18,8 @@ export default function FloatingContact() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Contrátanos por WhatsApp"
-        className="relative flex size-14 items-center justify-center rounded-full bg-gradient-brand text-brand-contrast shadow-[0_0_24px_rgba(249,115,22,0.45)] transition-transform hover:scale-110"
+        className="flex size-14 items-center justify-center rounded-full bg-gradient-brand text-brand-contrast shadow-[0_0_12px_rgba(249,115,22,0.25)] transition-transform hover:scale-105"
       >
-        {/* Aro que se expande de forma continua */}
-        <span
-          aria-hidden="true"
-          className="absolute inset-0 -z-10 rounded-full bg-brand/60 motion-safe:animate-ping"
-        />
         <WhatsAppIcon className="size-7 motion-safe:animate-wiggle" />
       </a>
     </div>
