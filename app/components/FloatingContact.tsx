@@ -3,7 +3,7 @@ import { InstagramIcon, WhatsAppIcon } from "./icons";
 
 export default function FloatingContact() {
   return (
-    <div className="fixed right-4 bottom-4 z-50 flex flex-col gap-3 sm:right-6 sm:bottom-6">
+    <div className="fixed right-[max(1rem,env(safe-area-inset-right))] bottom-[max(1rem,env(safe-area-inset-bottom))] z-50 flex flex-col gap-3 sm:right-[max(1.5rem,env(safe-area-inset-right))] sm:bottom-[max(1.5rem,env(safe-area-inset-bottom))]">
       <a
         href={socials.instagram}
         target="_blank"
