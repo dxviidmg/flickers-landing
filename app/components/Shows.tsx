@@ -82,7 +82,7 @@ export default async function Shows() {
     .sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-    <section id="shows" className="mx-auto min-h-svh w-full max-w-3xl px-6 py-20">
+    <section id="shows" className="mx-auto scroll-mt-12 min-h-svh w-full max-w-3xl px-6 py-20">
       <h2 className="font-display text-5xl uppercase tracking-wide text-gradient sm:text-6xl">
         Shows
       </h2>

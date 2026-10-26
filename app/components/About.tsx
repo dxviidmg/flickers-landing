@@ -3,7 +3,7 @@ import { about, members } from "../data/band";
 
 export default function About() {
   return (
-    <section id="quienes-somos" className="mx-auto w-full max-w-3xl px-6 py-20">
+    <section id="quienes-somos" className="mx-auto scroll-mt-12 w-full max-w-3xl px-6 py-20">
       <h2 className="font-display text-5xl uppercase tracking-wide text-gradient sm:text-6xl">
         Quiénes somos
       </h2>

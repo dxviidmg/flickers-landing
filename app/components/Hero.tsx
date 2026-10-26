@@ -11,7 +11,7 @@ const columns = withPhoto.length
 
 export default function Hero() {
   return (
-    <section className="relative isolate flex min-h-svh flex-col items-center justify-center overflow-hidden px-6 py-10 text-center">
+    <section id="inicio" className="relative isolate flex min-h-svh flex-col items-center justify-center overflow-hidden px-6 py-10 text-center">
       {/* Fondo: una columna por integrante */}
       <div className="absolute inset-0 -z-10 grid grid-cols-2 grid-rows-2 gap-0.5 bg-background lg:grid-cols-4 lg:grid-rows-1" aria-hidden="true">
         {columns.map((m, i) => (
