@@ -117,3 +117,14 @@ body {
 /* ───────── Movimiento ─────────
    Todo vive dentro de no-preference: con "reducir movimiento" no se anima nada. */
 
+/* Aparición al hacer scroll (la activa el componente Reveal). */
+[data-reveal] {
+  transition:
+    opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms),
+    transform 0.9s cubic-bezier(0.16, 1, 0.3, 1) var(--d, 0ms);
+}
+[data-reveal="hidden"] {
+  opacity: 0;
+  transform: translateY(32px);
+}
+

@@ -1,6 +1,7 @@
 import { cacheLife } from "next/cache";
 import { shows, type Show } from "../data/band";
 import FlyerModal from "./FlyerModal";
+import Reveal from "./Reveal";
 import ShowTabs from "./ShowTabs";
 
 // Fecha fija en UTC para que servidor y cliente rendericen igual.
@@ -21,7 +22,7 @@ function formatDate(iso: string) {
 function ShowList({ items, past = false }: { items: Show[]; past?: boolean }) {
   return (
     <ul className="divide-y divide-foreground/15 border-y border-foreground/15">
-      {items.map((show) => {
+      {items.map((show, index) => {
         const { day, month, year } = formatDate(show.date);
         const detail = show.time
           ? `${show.time} h`
@@ -29,13 +30,14 @@ function ShowList({ items, past = false }: { items: Show[]; past?: boolean }) {
             ? null
             : "Hora por definir";
         return (
-          <li
-            key={`${show.date}-${show.event ?? show.venue}`}
-            className={`flex items-center gap-5 py-5 ${past ? "opacity-75" : ""}`}
-          >
+          <li key={`${show.date}-${show.event ?? show.venue}`}>
+            <Reveal
+              delay={Math.min(index, 4) * 90}
+              className={`flex items-center gap-3 py-5 transition-colors sm:gap-5 hover:bg-foreground/5 ${past ? "opacity-75" : ""}`}
+            >
             <time
               dateTime={show.date}
-              className="flex w-20 shrink-0 flex-col items-center text-center leading-none"
+              className="flex w-16 shrink-0 flex-col items-center text-center leading-none sm:w-20"
             >
               <span
                 className={`font-display text-4xl ${past ? "text-foreground" : "text-accent"}`}
@@ -59,6 +61,7 @@ function ShowList({ items, past = false }: { items: Show[]; past?: boolean }) {
             {show.flyer && (
               <FlyerModal src={show.flyer} label={show.event ?? show.venue ?? ""} />
             )}
+            </Reveal>
           </li>
         );
       })}
@@ -83,9 +86,11 @@ export default async function Shows() {
 
   return (
     <section id="shows" className="mx-auto scroll-mt-12 min-h-svh w-full max-w-3xl px-6 py-20">
-      <h2 className="font-display text-5xl uppercase tracking-wide text-gradient sm:text-6xl">
-        Shows
-      </h2>
+      <Reveal>
+        <h2 className="font-display text-5xl uppercase tracking-wide text-gradient sm:text-6xl">
+          Shows
+        </h2>
+      </Reveal>
       <ShowTabs
         upcomingCount={upcoming.length}
         pastCount={past.length}

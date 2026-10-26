@@ -22,7 +22,7 @@ export default function FlyerModal({ src, label }: Props) {
           width={912}
           height={1280}
           sizes="64px"
-          className="h-24 w-auto"
+          className="h-20 w-auto sm:h-24"
         />
       </button>
       <dialog
