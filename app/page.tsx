@@ -1,3 +1,4 @@
+import FloatingContact from "./components/FloatingContact";
 import Hero from "./components/Hero";
 import Shows from "./components/Shows";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <main>
       <Hero />
       <Shows />
+      <FloatingContact />
     </main>
   );
 }
