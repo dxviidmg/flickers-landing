@@ -29,7 +29,6 @@ export const shows: Show[] = [
   { date: "2025-07-11", time: "17:00", venue: "Michelandia, camino La Estancia y Libramiento Ixmiquilpan-Actopan", municipality: "Actopan", event: "333 La Mejor Banda", flyer: "/flyers/2025-07-11-333-michelandia.webp" },
   { date: "2025-11-22", time: "15:00", venue: "Kiosco del centro de Actopan", municipality: "Actopan", event: "Day Music Fest", flyer: "/flyers/2025-11-22-day-music-fest.webp" },
   { date: "2026-09-25", time: "18:00", venue: "Cancha pública de Cañada Aviación", municipality: "Actopan", event: "Kermés para Toño" },
-  { date: "2026-10-27", time: "19:00", venue: "Arena Actopan, Rayón 34, Centro Nte.", municipality: "Actopan", event: "Conferencia Padrino Huevo", flyer: "/flyers/2026-10-27-padrino-huevo.webp" },
   { date: "2026-11-21", time: "20:00", venue: null, municipality: "Actopan", event: "Fiesta privada" },
 ];
 
