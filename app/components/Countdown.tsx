@@ -1,15 +1,12 @@
 "use client";
 
 import { useSyncExternalStore } from "react";
-import { shows, showsUtcOffset } from "../data/band";
-
-// Sin hora definida, la cuenta regresiva apunta al inicio del día.
-const startsAt = (s: (typeof shows)[number]) =>
-  new Date(`${s.date}T${s.time ?? "00:00"}:00${showsUtcOffset}`).getTime();
+import { shows } from "../data/band";
+import { showStart, showTitle } from "../lib/shows";
 
 function nextShow(now: number) {
   return shows
-    .map((show) => ({ show, at: startsAt(show) }))
+    .map((show) => ({ show, at: showStart(show) }))
     .filter(({ at }) => at > now)
     .sort((a, b) => a.at - b.at)[0];
 }
@@ -47,7 +44,7 @@ export default function Countdown() {
           Próximo show
         </p>
         <p className="text-legible max-w-[85vw] truncate text-base font-semibold">
-          {next.show.event ?? next.show.venue}
+          {showTitle(next.show)}
         </p>
       </div>
       <div
