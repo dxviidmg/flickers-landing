@@ -1,7 +1,7 @@
 import Image from "next/image";
-import type { CSSProperties } from "react";
 import Countdown from "./Countdown";
 import { members } from "../data/band";
+import { delay } from "../lib/motion";
 
 // Fondo de 4 columnas: las fotos disponibles se repiten hasta llenarlas.
 // Sin fotos, se muestran los integrantes como placeholder.
@@ -19,7 +19,7 @@ export default function Hero() {
           <div
             key={`${m.name}-${i}`}
             className="anim-col relative flex items-end justify-center overflow-hidden bg-foreground/10 pb-3"
-            style={{ "--d": `${i * 140}ms` } as CSSProperties}
+            style={delay(i * 140)}
           >
             {m.photo ? (
               <Image
@@ -54,18 +54,18 @@ export default function Hero() {
         />
       </h1>
       <div className="-mt-2 flex w-full flex-col items-center gap-1">
-        <p className="anim-rise type-eyebrow text-legible text-xs text-accent max-[379px]:tracking-[0.1em] min-[380px]:text-sm sm:text-base" style={{ "--d": "1500ms" } as CSSProperties}>
+        <p className="anim-rise type-eyebrow text-legible text-xs text-accent max-[379px]:tracking-[0.1em] min-[380px]:text-sm sm:text-base" style={delay(1500)}>
           Punk rock · Pop punk · Rock pop
         </p>
-        <p className="anim-rise text-legible max-w-md text-lg text-foreground/90" style={{ "--d": "1700ms" } as CSSProperties}>
+        <p className="anim-rise text-legible max-w-md text-lg text-foreground/90" style={delay(1700)}>
           Actopan, Hgo.
         </p>
-        <div className="anim-rise" style={{ "--d": "1900ms" } as CSSProperties}>
+        <div className="anim-rise" style={delay(1900)}>
           <Countdown />
         </div>
         <a
           href="#shows"
-          style={{ "--d": "2100ms" } as CSSProperties}
+          style={delay(2100)}
           className="anim-rise mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-gradient-brand px-8 py-3 font-semibold text-brand-contrast transition-opacity hover:opacity-90"
         >
           Próximos shows

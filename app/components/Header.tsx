@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, useState, type CSSProperties } from "react";
+import { useEffect, useRef, useState } from "react";
+import { delay } from "../lib/motion";
 
 const links = [
   { label: "Inicio", href: "#inicio" },
@@ -90,7 +91,7 @@ export default function Header() {
               {links.map((l, i) => (
                 <li
                   key={l.label}
-                  style={{ "--d": `${120 + i * 100}ms` } as CSSProperties}
+                  style={delay(120 + i * 100)}
                   className="nav-item max-md:-translate-y-2 max-md:opacity-0 max-md:transition max-md:duration-500 max-md:group-data-[open=true]:translate-y-0 max-md:group-data-[open=true]:opacity-100 max-md:group-data-[open=true]:[transition-delay:var(--d)] motion-reduce:transition-none"
                 >
                   <a

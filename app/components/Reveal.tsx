@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useRef, type CSSProperties, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
+import { delay as delayStyle } from "../lib/motion";
 
 type Props = { children: ReactNode; delay?: number; className?: string };
 
@@ -32,7 +33,7 @@ export default function Reveal({ children, delay = 0, className }: Props) {
     <div
       ref={ref}
       className={className}
-      style={{ "--d": `${delay}ms` } as CSSProperties}
+      style={delayStyle(delay)}
     >
       {children}
     </div>
