@@ -1,15 +1,12 @@
 import Image from "next/image";
 import Reveal from "./Reveal";
+import SectionTitle from "./SectionTitle";
 import { about, members } from "../data/band";
 
 export default function About() {
   return (
     <section id="quienes-somos" className="mx-auto scroll-mt-12 w-full max-w-3xl px-6 py-20">
-      <Reveal>
-        <h2 className="font-display text-5xl uppercase tracking-wide text-gradient sm:text-6xl">
-          Quiénes somos
-        </h2>
-      </Reveal>
+      <SectionTitle>Quiénes somos</SectionTitle>
       <div className="mt-6 space-y-4 text-lg text-muted">
         {about.map((p, i) => (
           <Reveal key={p} delay={i * 120}>
