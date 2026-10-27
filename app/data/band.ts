@@ -34,7 +34,7 @@ export const shows: Show[] = [
   { date: "2026-04-18", time: "22:00", venue: null, municipality: "Actopan", event: "Fiesta privada" },
   { date: "2026-04-26", time: "16:00", venue: "Plaza Juárez", municipality: "Actopan", event: "Día del Diseñador" },
   { date: "2026-07-25", time: "16:00", venue: "Jardín Los Olivos", municipality: "Actopan", event: "Kermés de bandas a beneficio", flyer: "/flyers/2026-07-25-kermes-de-bandas.webp" },
-  { date: "2026-09-04", time: "15:00", venue: "Explanada de la Presidencia", municipality: "Actopan", event: "Día del Emprendedor" },
+  { date: "2026-08-28", time: "15:00", venue: "Explanada de la Presidencia", municipality: "Actopan", event: "Día del Emprendedor" },
   { date: "2026-09-25", time: "18:00", venue: "Cancha pública de Cañada Aviación", municipality: "Actopan", event: "Kermés para el profe Teacher" },
   { date: "2026-11-21", time: "20:00", venue: null, municipality: "Actopan", event: "Fiesta privada" },
 ];
