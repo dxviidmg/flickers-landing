@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="hero-grain pointer-events-none absolute inset-0" />
       </div>
       {/* Logo, textos y cuenta regresiva: un solo bloque centrado en vertical */}
-      <h1>
+      <h1 className="[zoom:0.9]">
         <Image
           src="/logo.webp"
           alt="FLICKERS"
@@ -53,20 +53,20 @@ export default function Hero() {
           priority
         />
       </h1>
-      <div className="-mt-2 flex w-full flex-col items-center gap-1">
+      <div className="[zoom:0.9] mt-2 flex w-full flex-col items-center gap-1 sm:mt-4">
         <p className="anim-rise type-eyebrow text-legible text-xs text-accent max-[379px]:tracking-[0.1em] min-[380px]:text-sm sm:text-base" style={delay(1500)}>
           Punk rock · Pop punk · Rock pop
         </p>
         <p className="anim-rise text-legible max-w-md text-lg text-foreground/90" style={delay(1700)}>
           Actopan, Hgo.
         </p>
-        <div className="anim-rise" style={delay(1900)}>
+        <div className="anim-rise mt-1 sm:mt-2" style={delay(1900)}>
           <Countdown />
         </div>
         <a
           href="#shows"
           style={delay(2100)}
-          className="anim-rise mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-gradient-brand px-8 py-3 font-semibold text-brand-contrast transition-opacity hover:opacity-90"
+          className="anim-rise mt-2 inline-flex sm:mt-2.5 min-h-11 items-center justify-center rounded-full bg-gradient-brand px-8 py-3 font-semibold text-brand-contrast transition-opacity hover:opacity-90"
         >
           Próximos shows
         </a>
