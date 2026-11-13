@@ -12,7 +12,7 @@ const columns = withPhoto.length
 
 export default function Hero() {
   return (
-    <section id="inicio" className="relative isolate flex min-h-svh flex-col items-center justify-center overflow-hidden px-6 py-10 text-center">
+    <section id="inicio" className="relative isolate flex min-h-svh flex-col items-center justify-center overflow-hidden px-6 pb-8 pt-20 text-center md:pt-28">
       {/* Fondo: una columna por integrante */}
       <div className="hero-parallax absolute inset-0 -z-10 grid grid-cols-2 grid-rows-2 gap-0.5 bg-background lg:grid-cols-4 lg:grid-rows-1" aria-hidden="true">
         {columns.map((m, i) => (
@@ -49,7 +49,7 @@ export default function Hero() {
           width={1600}
           height={682}
           sizes="(min-width: 640px) 32rem, 80vw"
-          className="anim-logo h-auto w-[80vw] max-w-lg"
+          className="anim-logo h-auto w-[80vw] max-w-[min(32rem,62svh)]"
           priority
         />
       </h1>
@@ -66,7 +66,7 @@ export default function Hero() {
         <a
           href="#shows"
           style={delay(2100)}
-          className="anim-rise mt-6 inline-flex min-h-11 items-center justify-center rounded-full bg-gradient-brand px-8 py-3 font-semibold text-brand-contrast transition-opacity hover:opacity-90"
+          className="anim-rise mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-gradient-brand px-8 py-3 font-semibold text-brand-contrast transition-opacity hover:opacity-90"
         >
           Próximos shows
         </a>
