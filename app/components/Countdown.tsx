@@ -25,7 +25,7 @@ export default function Countdown() {
   const now = useSyncExternalStore(subscribe, getNow, () => null);
 
   // Reserva el alto antes de montar para que el bloque centrado no salte.
-  if (now === null) return <div className="mt-6 h-32" aria-hidden="true" />;
+  if (now === null) return <div className="mt-5 h-28" aria-hidden="true" />;
   const next = nextShow(now);
   if (!next) return null;
 
@@ -55,9 +55,9 @@ export default function Countdown() {
         {units.map((u) => (
           <div
             key={u.label}
-            className="flex w-16 flex-col items-center rounded-lg border border-brand/30 bg-background/60 py-2 backdrop-blur sm:w-20"
+            className="flex w-14 flex-col items-center rounded-lg border border-brand/30 bg-background/60 py-1.5 backdrop-blur sm:w-[4.5rem]"
           >
-            <span className="font-display text-3xl tabular-nums text-gradient sm:text-4xl">
+            <span className="font-display text-[1.65rem] tabular-nums text-gradient sm:text-[2.25rem]">
               {pad(u.value)}
             </span>
             <span className="type-eyebrow text-[0.7rem] text-muted">
